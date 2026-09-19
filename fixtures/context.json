@@ -1,0 +1,10 @@
+{
+  "domain": "food-marketing-compliance",
+  "version": 1,
+  "facts": [
+    "产品属于普通食品",
+    "商品配料与消费者熟悉的同名药品不同",
+    "抽检合格与营销合规不是同一结论"
+  ],
+  "sample_id": "sample-016"
+}
