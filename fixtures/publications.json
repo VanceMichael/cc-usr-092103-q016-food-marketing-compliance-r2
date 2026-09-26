@@ -1,0 +1,58 @@
+[
+  {
+    "publication_id": "PUB-01",
+    "material_id": "M-FRONT",
+    "material_version": 1,
+    "channel_id": "CH-MALL",
+    "start": "2025-03-01",
+    "end": null
+  },
+  {
+    "publication_id": "PUB-02",
+    "material_id": "M-BACK",
+    "material_version": 1,
+    "channel_id": "CH-MALL",
+    "start": "2025-03-01",
+    "end": "2025-08-31"
+  },
+  {
+    "publication_id": "PUB-03",
+    "material_id": "M-BACK",
+    "material_version": 2,
+    "channel_id": "CH-MALL",
+    "start": "2025-09-01",
+    "end": null
+  },
+  {
+    "publication_id": "PUB-04",
+    "material_id": "M-LIVE",
+    "material_version": 1,
+    "channel_id": "CH-LIVE",
+    "start": "2025-06-01",
+    "end": null
+  },
+  {
+    "publication_id": "PUB-05",
+    "material_id": "M-POSTER",
+    "material_version": 1,
+    "channel_id": "CH-VIDEO",
+    "start": "2025-05-01",
+    "end": null
+  },
+  {
+    "publication_id": "PUB-06",
+    "material_id": "M-POSTER",
+    "material_version": 1,
+    "channel_id": "CH-LIVE",
+    "start": "2025-09-10",
+    "end": null
+  },
+  {
+    "publication_id": "PUB-07",
+    "material_id": "M-BACK",
+    "material_version": 1,
+    "channel_id": "CH-VIDEO",
+    "start": "2025-09-15",
+    "end": null
+  }
+]

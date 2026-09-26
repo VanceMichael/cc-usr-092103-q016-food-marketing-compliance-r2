@@ -1,0 +1,32 @@
+[
+  {
+    "disposition_id": "D-01",
+    "dtype": "下架",
+    "publication_id": "PUB-04",
+    "material_id": "M-LIVE",
+    "reason": "消费者投诉 K-01：直播话术宣称药品功效",
+    "actor": "法务部",
+    "created_at": "2025-07-15",
+    "note": "直播间话术即时停用，历史发布页面保留备查"
+  },
+  {
+    "disposition_id": "D-02",
+    "dtype": "澄清",
+    "publication_id": null,
+    "material_id": "M-LIVE",
+    "reason": "就喉糖与同名口服液的功效差异发布说明",
+    "actor": "品牌部",
+    "created_at": "2025-07-18",
+    "note": "官网与旗舰店同步澄清公告"
+  },
+  {
+    "disposition_id": "D-03",
+    "dtype": "修改",
+    "publication_id": "PUB-02",
+    "material_id": "M-BACK",
+    "reason": "包装背面新增功效表述边界说明",
+    "actor": "市场部",
+    "created_at": "2025-08-25",
+    "note": "对应素材版本 M-BACK v2"
+  }
+]

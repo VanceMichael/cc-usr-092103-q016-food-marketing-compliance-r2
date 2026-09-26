@@ -1,0 +1,52 @@
+[
+  {
+    "review_id": "R-01",
+    "material_id": "M-POSTER",
+    "material_version": 1,
+    "reviewer": "王某",
+    "role": "质量",
+    "decision": "通过",
+    "cited_evidence": [
+      {"evidence_id": "E-TM", "version": 1},
+      {"evidence_id": "E-INSP", "version": 1}
+    ],
+    "created_at": "2025-04-26",
+    "note": "商标与抽检均无问题"
+  },
+  {
+    "review_id": "R-02",
+    "material_id": "M-LIVE",
+    "material_version": 1,
+    "reviewer": "李某",
+    "role": "法务",
+    "decision": "通过",
+    "cited_evidence": [{"evidence_id": "E-LEGAL", "version": 1}],
+    "created_at": "2025-05-29",
+    "note": "话术整体可用"
+  },
+  {
+    "review_id": "R-03",
+    "material_id": "M-LIVE",
+    "material_version": 1,
+    "reviewer": "赵某",
+    "role": "质量",
+    "decision": "驳回",
+    "cited_evidence": [{"evidence_id": "E-INSP", "version": 1}],
+    "created_at": "2025-05-30",
+    "note": "功效表述存疑"
+  },
+  {
+    "review_id": "R-04",
+    "material_id": "M-BACK",
+    "material_version": 2,
+    "reviewer": "李某",
+    "role": "法务",
+    "decision": "通过",
+    "cited_evidence": [
+      {"evidence_id": "E-FORMULA", "version": 2},
+      {"evidence_id": "E-LEGAL", "version": 1}
+    ],
+    "created_at": "2025-08-26",
+    "note": "功效表述边界已按法律意见核对"
+  }
+]

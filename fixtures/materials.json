@@ -1,0 +1,47 @@
+[
+  {
+    "material_id": "M-FRONT",
+    "version": 1,
+    "product_id": "P-LOZ",
+    "kind": "包装正面",
+    "content_hash": "img-front-v1",
+    "claim_ids": ["C-ING", "C-TM"],
+    "created_at": "2025-02-20"
+  },
+  {
+    "material_id": "M-BACK",
+    "version": 1,
+    "product_id": "P-LOZ",
+    "kind": "包装背面",
+    "content_hash": "img-back-v1",
+    "claim_ids": ["C-ING", "C-QC"],
+    "created_at": "2025-02-20"
+  },
+  {
+    "material_id": "M-BACK",
+    "version": 2,
+    "product_id": "P-LOZ",
+    "kind": "包装背面",
+    "content_hash": "img-back-v2",
+    "claim_ids": ["C-ING", "C-EFF1", "C-QC"],
+    "created_at": "2025-08-25"
+  },
+  {
+    "material_id": "M-LIVE",
+    "version": 1,
+    "product_id": "P-LOZ",
+    "kind": "直播话术",
+    "content_hash": "script-live-v1",
+    "claim_ids": ["C-EFF1", "C-EFF2", "C-END"],
+    "created_at": "2025-05-28"
+  },
+  {
+    "material_id": "M-POSTER",
+    "version": 1,
+    "product_id": "P-LOZ",
+    "kind": "代言海报",
+    "content_hash": "img-poster-v1",
+    "claim_ids": ["C-END", "C-EFF2", "C-CMP"],
+    "created_at": "2025-04-25"
+  }
+]

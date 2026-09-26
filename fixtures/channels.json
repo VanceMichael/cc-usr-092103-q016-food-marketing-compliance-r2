@@ -1,0 +1,26 @@
+[
+  {
+    "channel_id": "CH-MALL",
+    "name": "电商旗舰店",
+    "channel_type": "电商",
+    "restricted_claim_types": []
+  },
+  {
+    "channel_id": "CH-LIVE",
+    "name": "品牌直播间",
+    "channel_type": "直播",
+    "restricted_claim_types": ["对比宣传"]
+  },
+  {
+    "channel_id": "CH-STORE",
+    "name": "线下商超",
+    "channel_type": "线下",
+    "restricted_claim_types": []
+  },
+  {
+    "channel_id": "CH-VIDEO",
+    "name": "短视频账号",
+    "channel_type": "社媒",
+    "restricted_claim_types": ["对比宣传"]
+  }
+]

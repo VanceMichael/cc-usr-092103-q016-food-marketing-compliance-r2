@@ -1,0 +1,14 @@
+[
+  {
+    "product_id": "P-LOZ",
+    "name": "蓝芩喉糖",
+    "category": "普通食品",
+    "ingredients": ["白砂糖", "葡萄糖浆", "薄荷脑", "桔梗提取物", "甘草提取物", "食用香精"]
+  },
+  {
+    "product_id": "P-ORAL",
+    "name": "蓝芩口服液",
+    "category": "药品",
+    "ingredients": ["板蓝根", "黄芩", "栀子", "黄柏", "胖大海"]
+  }
+]

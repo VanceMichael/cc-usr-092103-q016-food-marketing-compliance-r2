@@ -1,0 +1,57 @@
+[
+  {
+    "claim_id": "C-ING",
+    "product_id": "P-LOZ",
+    "claim_type": "成分描述",
+    "text": "含薄荷脑、桔梗提取物",
+    "evidence": [{"evidence_id": "E-FORMULA", "version": 1}]
+  },
+  {
+    "claim_id": "C-TM",
+    "product_id": "P-LOZ",
+    "claim_type": "商标使用",
+    "text": "蓝芩®",
+    "evidence": [{"evidence_id": "E-TM", "version": 1}]
+  },
+  {
+    "claim_id": "C-QC",
+    "product_id": "P-LOZ",
+    "claim_type": "质量表述",
+    "text": "2025年一季度抽检合格",
+    "evidence": [{"evidence_id": "E-INSP", "version": 1}]
+  },
+  {
+    "claim_id": "C-EFF1",
+    "product_id": "P-LOZ",
+    "claim_type": "功效表述",
+    "text": "清咽润喉，缓解咽喉不适",
+    "evidence": [
+      {"evidence_id": "E-FORMULA", "version": 1},
+      {"evidence_id": "E-LEGAL", "version": 1}
+    ]
+  },
+  {
+    "claim_id": "C-EFF2",
+    "product_id": "P-LOZ",
+    "claim_type": "功效表述",
+    "text": "抗病毒、治咽炎，与蓝芩口服液同款功效",
+    "evidence": [
+      {"evidence_id": "E-TM", "version": 1},
+      {"evidence_id": "E-INSP", "version": 1}
+    ]
+  },
+  {
+    "claim_id": "C-END",
+    "product_id": "P-LOZ",
+    "claim_type": "代言背书",
+    "text": "代言人：咽喉不适就吃蓝芩喉糖",
+    "evidence": [{"evidence_id": "E-LEGAL", "version": 1}]
+  },
+  {
+    "claim_id": "C-CMP",
+    "product_id": "P-LOZ",
+    "claim_type": "对比宣传",
+    "text": "比蓝芩口服液更方便",
+    "evidence": [{"evidence_id": "E-LEGAL", "version": 1}]
+  }
+]

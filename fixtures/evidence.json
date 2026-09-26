@@ -1,0 +1,62 @@
+[
+  {
+    "evidence_id": "E-FORMULA",
+    "version": 1,
+    "kind": "配料表",
+    "title": "蓝芩喉糖配料表（备案版）",
+    "issuer": "质量部",
+    "valid_from": "2025-01-01",
+    "valid_to": "2025-08-31",
+    "summary": "含薄荷脑、桔梗提取物、甘草提取物等"
+  },
+  {
+    "evidence_id": "E-FORMULA",
+    "version": 2,
+    "kind": "配料表",
+    "title": "蓝芩喉糖配料表（2025 修订）",
+    "issuer": "质量部",
+    "valid_from": "2025-09-01",
+    "valid_to": null,
+    "summary": "调整食用香精表述，其余不变"
+  },
+  {
+    "evidence_id": "E-TM",
+    "version": 1,
+    "kind": "商标注册证",
+    "title": "“蓝芩”第30类（糖果）商标注册证",
+    "issuer": "知识产权主管机关（虚构）",
+    "valid_from": "2020-01-01",
+    "valid_to": null,
+    "summary": "核定使用商品：糖果；不覆盖药品功效宣传"
+  },
+  {
+    "evidence_id": "E-INSP",
+    "version": 1,
+    "kind": "抽检报告",
+    "title": "2025年一季度抽检合格报告",
+    "issuer": "某市检验检测中心（虚构）",
+    "valid_from": "2025-03-15",
+    "valid_to": "2025-12-31",
+    "summary": "理化与微生物指标合格；仅代表被检批次质量"
+  },
+  {
+    "evidence_id": "E-LEGAL",
+    "version": 1,
+    "kind": "法律意见",
+    "title": "普通食品宣传用语法律意见（2025）",
+    "issuer": "法务部",
+    "valid_from": "2025-01-01",
+    "valid_to": "2025-09-30",
+    "summary": "普通食品不得宣称疾病治疗、预防功能，不得与药品混淆"
+  },
+  {
+    "evidence_id": "E-LEGAL",
+    "version": 2,
+    "kind": "法律意见",
+    "title": "普通食品宣传用语法律意见（2025 修订）",
+    "issuer": "法务部",
+    "valid_from": "2025-10-01",
+    "valid_to": null,
+    "summary": "按 REG-02 补充“缓解咽喉不适”类表述的边界"
+  }
+]
