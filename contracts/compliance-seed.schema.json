@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "营销合规审校种子资料",
+  "type": "object",
+  "required": [
+    "domain",
+    "sample_id",
+    "review_policy",
+    "products",
+    "channels",
+    "evidence",
+    "regulations",
+    "materials"
+  ],
+  "properties": {
+    "domain": { "const": "food-marketing-compliance" },
+    "sample_id": { "type": "string", "minLength": 1 },
+    "note": { "type": "string" },
+    "review_policy": {
+      "type": "object",
+      "required": ["roles", "required_roles", "topic_evidence"],
+      "properties": {
+        "roles": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "required_roles": {
+          "type": "object",
+          "propertyNames": { "enum": ["ordinary_food", "drug_efficacy"] },
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          }
+        },
+        "topic_evidence": {
+          "type": "object",
+          "propertyNames": {
+            "enum": ["general", "ingredient", "quality", "brand", "efficacy"]
+          },
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "enum": ["formula", "trademark", "inspection", "legal_opinion"]
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "products": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/product" }
+    },
+    "channels": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/channel" }
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidence" }
+    },
+    "regulations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/regulation" }
+    },
+    "materials": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/material" }
+    },
+    "approvals": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/approval" }
+    },
+    "publications": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/publication" }
+    },
+    "complaints": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/complaint" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "date": { "type": "string", "format": "date" },
+    "product": {
+      "type": "object",
+      "required": ["product_id", "name", "product_type"],
+      "properties": {
+        "product_id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "product_type": { "enum": ["ordinary_food", "drug"] },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "channel": {
+      "type": "object",
+      "required": ["channel_id", "name", "kind"],
+      "properties": {
+        "channel_id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "series_id",
+        "kind",
+        "version",
+        "title",
+        "valid_from"
+      ],
+      "properties": {
+        "evidence_id": { "type": "string", "minLength": 1 },
+        "series_id": { "type": "string", "minLength": 1 },
+        "kind": {
+          "enum": ["formula", "trademark", "inspection", "legal_opinion"]
+        },
+        "version": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string" },
+        "valid_from": { "$ref": "#/$defs/date" },
+        "valid_to": { "type": ["string", "null"], "format": "date" }
+      },
+      "additionalProperties": false
+    },
+    "regulation": {
+      "type": "object",
+      "required": [
+        "regulation_id",
+        "series_id",
+        "name",
+        "version",
+        "effective_from",
+        "rules"
+      ],
+      "properties": {
+        "regulation_id": { "type": "string", "minLength": 1 },
+        "series_id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "integer", "minimum": 1 },
+        "effective_from": { "$ref": "#/$defs/date" },
+        "effective_to": { "type": ["string", "null"], "format": "date" },
+        "rules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["product_type", "category"],
+            "properties": {
+              "product_type": { "enum": ["ordinary_food", "drug"] },
+              "category": { "enum": ["ordinary_food", "drug_efficacy"] },
+              "topic": {
+                "type": ["string", "null"],
+                "enum": ["general", "ingredient", "quality", "brand", "efficacy", null]
+              },
+              "note": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "material": {
+      "type": "object",
+      "required": ["material_id", "product_id", "title", "versions"],
+      "properties": {
+        "material_id": { "type": "string", "minLength": 1 },
+        "product_id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "versions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["created_on", "claims"],
+            "properties": {
+              "created_on": { "$ref": "#/$defs/date" },
+              "note": { "type": "string" },
+              "claims": {
+                "type": "array",
+                "items": { "$ref": "#/$defs/claim" }
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "claim": {
+      "type": "object",
+      "required": ["claim_id", "slot", "text", "category", "topic"],
+      "properties": {
+        "claim_id": { "type": "string", "minLength": 1 },
+        "slot": {
+          "enum": ["package_front", "package_back", "ad_copy", "endorsement"]
+        },
+        "text": { "type": "string", "minLength": 1 },
+        "category": { "enum": ["ordinary_food", "drug_efficacy"] },
+        "topic": {
+          "enum": ["general", "ingredient", "quality", "brand", "efficacy"]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "approval": {
+      "type": "object",
+      "required": ["material_id", "version", "role", "decision", "decided_on"],
+      "properties": {
+        "material_id": { "type": "string", "minLength": 1 },
+        "version": { "type": "integer", "minimum": 1 },
+        "role": { "type": "string", "minLength": 1 },
+        "decision": { "enum": ["approved", "rejected"] },
+        "decided_on": { "$ref": "#/$defs/date" },
+        "channels": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "comment": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "publication": {
+      "type": "object",
+      "required": ["material_id", "version", "channel_id", "started_on"],
+      "properties": {
+        "material_id": { "type": "string", "minLength": 1 },
+        "version": { "type": "integer", "minimum": 1 },
+        "channel_id": { "type": "string", "minLength": 1 },
+        "started_on": { "$ref": "#/$defs/date" }
+      },
+      "additionalProperties": false
+    },
+    "complaint": {
+      "type": "object",
+      "required": [
+        "complaint_id",
+        "product_id",
+        "channel_id",
+        "observed_on",
+        "description"
+      ],
+      "properties": {
+        "complaint_id": { "type": "string", "minLength": 1 },
+        "product_id": { "type": "string", "minLength": 1 },
+        "channel_id": { "type": "string", "minLength": 1 },
+        "observed_on": { "$ref": "#/$defs/date" },
+        "description": { "type": "string", "minLength": 1 },
+        "quotes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

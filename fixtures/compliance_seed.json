@@ -1,0 +1,276 @@
+{
+  "domain": "food-marketing-compliance",
+  "sample_id": "sample-016",
+  "note": "全部为虚构数据：蓝芩喉糖为普通食品（压片糖果），与同名牌药品配方不同；时间线用于演示投诉核对流程。",
+  "review_policy": {
+    "roles": ["legal", "quality", "medical"],
+    "required_roles": {
+      "ordinary_food": ["legal", "quality"],
+      "drug_efficacy": ["legal", "medical"]
+    },
+    "topic_evidence": {
+      "general": ["formula", "inspection", "legal_opinion"],
+      "ingredient": ["formula", "legal_opinion"],
+      "quality": ["inspection", "legal_opinion"],
+      "brand": ["trademark", "legal_opinion"],
+      "efficacy": ["legal_opinion"]
+    }
+  },
+  "products": [
+    {
+      "product_id": "lanqin-lozenge",
+      "name": "蓝芩喉糖",
+      "product_type": "ordinary_food",
+      "note": "普通食品（压片糖果），与同名药品配方不同"
+    },
+    {
+      "product_id": "lanqin-oral-liquid",
+      "name": "蓝芩口服液",
+      "product_type": "drug",
+      "note": "同名药品，非本投诉涉及产品"
+    }
+  ],
+  "channels": [
+    { "channel_id": "tmall-flagship", "name": "电商旗舰店", "kind": "e-commerce" },
+    { "channel_id": "retail-pharmacy", "name": "连锁药店", "kind": "retail" },
+    { "channel_id": "short-video", "name": "短视频平台", "kind": "social" }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "ev-formula-v1",
+      "series_id": "formula-lozenge",
+      "kind": "formula",
+      "version": 1,
+      "title": "喉糖配料表（2024 版）",
+      "summary": "白砂糖、薄荷脑、桔梗提取物",
+      "valid_from": "2024-06-01",
+      "valid_to": "2025-08-31"
+    },
+    {
+      "evidence_id": "ev-formula-v2",
+      "series_id": "formula-lozenge",
+      "kind": "formula",
+      "version": 2,
+      "title": "喉糖配料表（2025 版）",
+      "summary": "白砂糖、桔梗提取物、甘草提取物；去除薄荷脑",
+      "valid_from": "2025-09-01",
+      "valid_to": null
+    },
+    {
+      "evidence_id": "ev-trademark",
+      "series_id": "tm-lanqin",
+      "kind": "trademark",
+      "version": 1,
+      "title": "“蓝芩”注册商标证（第 30 类 糖果）",
+      "summary": "注册商标仅证明品牌权属，不构成宣传内容依据",
+      "valid_from": "2023-01-01",
+      "valid_to": null
+    },
+    {
+      "evidence_id": "ev-inspection-2025",
+      "series_id": "inspection-lozenge",
+      "kind": "inspection",
+      "version": 1,
+      "title": "2025 年二季度抽检合格报告",
+      "summary": "抽检合格仅覆盖质量指标，不等于营销合规结论",
+      "valid_from": "2025-04-01",
+      "valid_to": "2025-12-31"
+    },
+    {
+      "evidence_id": "ev-legal-2025",
+      "series_id": "legal-lozenge",
+      "kind": "legal_opinion",
+      "version": 1,
+      "title": "法务意见书（2025 年版话术）",
+      "summary": "喉糖为普通食品，宣传不得涉及疾病治疗功能；2025 年版页面与代言话术已审",
+      "valid_from": "2025-01-01",
+      "valid_to": null
+    }
+  ],
+  "regulations": [
+    {
+      "regulation_id": "reg-ad-2024",
+      "series_id": "ad-law",
+      "name": "食品广告合规规定（2024 版）",
+      "version": 1,
+      "effective_from": "2024-01-01",
+      "effective_to": null,
+      "rules": [
+        {
+          "product_type": "ordinary_food",
+          "category": "drug_efficacy",
+          "topic": null,
+          "note": "普通食品不得宣称疾病治疗功能"
+        }
+      ]
+    },
+    {
+      "regulation_id": "reg-ad-2026",
+      "series_id": "ad-law",
+      "name": "食品广告合规规定（2026 版）",
+      "version": 2,
+      "effective_from": "2026-03-01",
+      "effective_to": null,
+      "rules": [
+        {
+          "product_type": "ordinary_food",
+          "category": "drug_efficacy",
+          "topic": null,
+          "note": "普通食品不得宣称疾病治疗功能"
+        },
+        {
+          "product_type": "ordinary_food",
+          "category": "ordinary_food",
+          "topic": "efficacy",
+          "note": "普通食品不得使用易与药品功效混淆的表述"
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "material_id": "lozenge-page",
+      "product_id": "lanqin-lozenge",
+      "title": "蓝芩喉糖详情页",
+      "versions": [
+        {
+          "created_on": "2025-05-01",
+          "note": "首版：含代言话术",
+          "claims": [
+            {
+              "claim_id": "c-brand-front",
+              "slot": "package_front",
+              "text": "蓝芩喉糖",
+              "category": "ordinary_food",
+              "topic": "brand",
+              "evidence_ids": ["ev-trademark"]
+            },
+            {
+              "claim_id": "c-ingredients-back",
+              "slot": "package_back",
+              "text": "配料：白砂糖、薄荷脑、桔梗提取物",
+              "category": "ordinary_food",
+              "topic": "ingredient",
+              "evidence_ids": ["ev-formula-v1"]
+            },
+            {
+              "claim_id": "c-quality-ad",
+              "slot": "ad_copy",
+              "text": "抽检合格，品质放心",
+              "category": "ordinary_food",
+              "topic": "quality",
+              "evidence_ids": ["ev-inspection-2025"]
+            },
+            {
+              "claim_id": "c-eff-ad",
+              "slot": "ad_copy",
+              "text": "清咽利喉，舒缓咽部不适",
+              "category": "ordinary_food",
+              "topic": "efficacy",
+              "evidence_ids": ["ev-legal-2025"]
+            },
+            {
+              "claim_id": "c-endorse",
+              "slot": "endorsement",
+              "text": "代言人：就像随身带的喉糖版口服液",
+              "category": "ordinary_food",
+              "topic": "efficacy",
+              "evidence_ids": ["ev-legal-2025"]
+            }
+          ]
+        },
+        {
+          "created_on": "2025-09-15",
+          "note": "配方改版：更新配料表达，下线代言话术",
+          "claims": [
+            {
+              "claim_id": "c-brand-front",
+              "slot": "package_front",
+              "text": "蓝芩喉糖",
+              "category": "ordinary_food",
+              "topic": "brand",
+              "evidence_ids": ["ev-trademark"]
+            },
+            {
+              "claim_id": "c-ingredients-back-2",
+              "slot": "package_back",
+              "text": "配料：白砂糖、桔梗提取物、甘草提取物",
+              "category": "ordinary_food",
+              "topic": "ingredient",
+              "evidence_ids": ["ev-formula-v2"]
+            },
+            {
+              "claim_id": "c-quality-ad",
+              "slot": "ad_copy",
+              "text": "抽检合格，品质放心",
+              "category": "ordinary_food",
+              "topic": "quality",
+              "evidence_ids": ["ev-inspection-2025"]
+            },
+            {
+              "claim_id": "c-eff-ad",
+              "slot": "ad_copy",
+              "text": "清咽利喉，舒缓咽部不适",
+              "category": "ordinary_food",
+              "topic": "efficacy",
+              "evidence_ids": ["ev-legal-2025"]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "approvals": [
+    {
+      "material_id": "lozenge-page",
+      "version": 1,
+      "role": "legal",
+      "decision": "approved",
+      "decided_on": "2025-05-08",
+      "channels": ["tmall-flagship", "short-video"],
+      "comment": "2025 年版话术已审"
+    },
+    {
+      "material_id": "lozenge-page",
+      "version": 1,
+      "role": "quality",
+      "decision": "approved",
+      "decided_on": "2025-05-08",
+      "channels": ["tmall-flagship", "short-video"],
+      "comment": "配料与抽检报告核对一致"
+    },
+    {
+      "material_id": "lozenge-page",
+      "version": 2,
+      "role": "legal",
+      "decision": "approved",
+      "decided_on": "2025-09-18",
+      "channels": ["tmall-flagship"],
+      "comment": "配方改版复核"
+    },
+    {
+      "material_id": "lozenge-page",
+      "version": 2,
+      "role": "quality",
+      "decision": "approved",
+      "decided_on": "2025-09-18",
+      "channels": ["tmall-flagship"],
+      "comment": "新配料表核对一致"
+    }
+  ],
+  "publications": [
+    { "material_id": "lozenge-page", "version": 1, "channel_id": "tmall-flagship", "started_on": "2025-05-10" },
+    { "material_id": "lozenge-page", "version": 1, "channel_id": "short-video", "started_on": "2025-05-10" },
+    { "material_id": "lozenge-page", "version": 2, "channel_id": "tmall-flagship", "started_on": "2025-09-20" }
+  ],
+  "complaints": [
+    {
+      "complaint_id": "cmp-001",
+      "product_id": "lanqin-lozenge",
+      "channel_id": "short-video",
+      "observed_on": "2026-05-10",
+      "description": "消费者称在短视频平台刷到蓝芩喉糖页面，像同名口服液的“喉糖版”，担心普通食品冒充药品功效。",
+      "quotes": ["就像随身带的喉糖版口服液", "清咽利喉"]
+    }
+  ]
+}
